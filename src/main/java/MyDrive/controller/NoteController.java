@@ -24,11 +24,14 @@ public class NoteController {
 
     @PostMapping
     public String addNote(@ModelAttribute Note note, Authentication auth, RedirectAttributes redirectAttributes){
-        final Note noteByUsernameAndTitle = noteService.findByUsernameAndTitle(auth.getName(), note.getTitle());
-        //duplicate Note title
-        if(noteByUsernameAndTitle!=null){
-            redirectAttributes.addFlashAttribute("message", ErrorAndWarningMessages.DUPLICATE_NOTE_TITLE);
-            return "redirect:/home";
+        //new note->check title duplication
+        if(note.getId()==null) {
+            final Note noteByUsernameAndTitle = noteService.findByUsernameAndTitle(auth.getName(), note.getTitle());
+            //duplicate Note title
+            if (noteByUsernameAndTitle != null) {
+                redirectAttributes.addFlashAttribute("message", ErrorAndWarningMessages.DUPLICATE_NOTE_TITLE);
+                return "redirect:/home";
+            }
         }
         redirectAttributes.addFlashAttribute("success", true);
         //create note

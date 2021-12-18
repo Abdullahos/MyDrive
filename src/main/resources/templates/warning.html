@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+    <title>WARNING</title>
+</head>
+<body class="p-3 mb-2 bg-light text-black">
+    <div class="container justify-content-center w-50 p-3" style="margin-top: 1.5em;" ></div>
+        <h1 class="alert alert-danger fill-parent">warning:this action can't be rolled back!</h1>
+        <form action="#" method="POST" th:action="@{/delete}">
+        <button type="submit" class="btn btn-danger" id="del-btn" >Delete</button>
+        </form>
+    </div>
+</body>
+</html>
