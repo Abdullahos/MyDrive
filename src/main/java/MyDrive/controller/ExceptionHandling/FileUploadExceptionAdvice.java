@@ -1,4 +1,4 @@
-package com.Mydrive.MyDrive.ExceptionHandling;
+package MyDrive.controller.ExceptionHandling;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
