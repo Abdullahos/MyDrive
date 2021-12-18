@@ -1,6 +1,6 @@
-package com.Mydrive.MyDrive.Repository;
+package MyDrive.Repository;
 
-import com.Mydrive.MyDrive.models.Note;
+import MyDrive.models.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
