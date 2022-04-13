@@ -1,5 +1,5 @@
 # Super*Duper*Drive Cloud Storage
-Something like google drive but more organized. You can Upload files, note, and credentials. Don't worry about your sites-passwords, They saved encrypted, so no one can view them except you.
+Something like google drive but more organized. You can Upload files, note, and credentials. Don't worry about your sites-passwords, They 're saved encrypted, so no one can view them except you.
 
 
 
